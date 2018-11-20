@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  float: ce;
+  text-align: center;
+  padding-top: 250px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.button-lang {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+#apps {
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: 500;
+}
