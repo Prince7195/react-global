@@ -1,6 +1,6 @@
 declare var Rx: any;
 namespace Store {
-  class GlobalConnector {
+  class GlobalConnector implements IGlobalConnector {
     private subject = new Rx.BehaviorSubject({});
 
     dispatch(action: IAction) {
@@ -14,6 +14,7 @@ namespace Store {
 
   export const GlobalListener = new GlobalConnector();
 }
+
 interface IAction {
   type: string;
   payload?: any;
@@ -21,3 +22,8 @@ interface IAction {
 }
 
 type IGConnectorCallback = (action: IAction) => void;
+
+interface IGlobalConnector {
+  dispatch: (action: IAction) => void;
+  listen: (callback: IGConnectorCallback) => void;
+}
